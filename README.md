@@ -22,4 +22,19 @@ Instructions
 5.	Unit tast cases to test individual services
 6.	Sample screenshots are included in the screenshot folder
 
+Sample Screenshots
+
+![Image of Screenshot](https://github.com/myobcodechallenge/codechallenge/blob/master/Screenshots/screenshot1.JPG)
+
+
+![Image of Screenshot](https://github.com/myobcodechallenge/codechallenge/blob/master/Screenshots/screenshot3.JPG)
+
+
+![Image of Screenshot](https://github.com/myobcodechallenge/codechallenge/blob/master/Screenshots/screenshot2.JPG)
+
+
+![Image of Screenshot](https://github.com/myobcodechallenge/codechallenge/blob/master/Screenshots/screenshot4.JPG)
+
+
+![Image of Screenshot](https://github.com/myobcodechallenge/codechallenge/blob/master/Screenshots/screenshot5.JPG)
 
