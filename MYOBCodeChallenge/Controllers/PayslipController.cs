@@ -26,7 +26,7 @@ namespace MYOBCodeChallenge.Controllers
         public IActionResult Generatepayslip([FromBody]string input)
         {
 
-            var employee = ValidateInputGetEmployye(input);
+            var employee = ValidateInputGetEmployee(input);
             if (employee != null)
             {
                 var paydetails = _payslipService.GetPayslip(employee.FirstName, employee.LastName, employee.PayPeriod, employee.SuperPercentage, employee.AnnualSalary);
@@ -56,7 +56,7 @@ namespace MYOBCodeChallenge.Controllers
                     {
                         if (!String.IsNullOrEmpty(row))
                         {
-                            var employee = ValidateInputGetEmployye(row.Trim());
+                            var employee = ValidateInputGetEmployee(row.Trim());
                             if (employee != null)
                             {
                                 var paydetails = _payslipService.GetPayslip(employee.FirstName, employee.LastName, employee.PayPeriod, employee.SuperPercentage, employee.AnnualSalary);
@@ -88,7 +88,7 @@ namespace MYOBCodeChallenge.Controllers
                 return BadRequest("Invalid File Format");
             }
         }        
-        private Employee ValidateInputGetEmployye(string csvInput)
+        private Employee ValidateInputGetEmployee(string csvInput)
         {           
 
             if (!string.IsNullOrEmpty(csvInput) && csvInput.Trim().Split(',').Count() == 5)

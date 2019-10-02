@@ -22,6 +22,10 @@ Instructions
 5.	Unit tast cases to test individual services
 6.	Sample screenshots are included in the screenshot folder
 
+Assumptions
+
+1.	Pay Period will be always for one month
+
 Sample Screenshots
 
 ![Image of Screenshot](https://github.com/myobcodechallenge/codechallenge/blob/master/Screenshots/screenshot1.JPG)
