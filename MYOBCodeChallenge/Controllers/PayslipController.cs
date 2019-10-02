@@ -45,7 +45,7 @@ namespace MYOBCodeChallenge.Controllers
             {
               
                 var memory = new MemoryStream();
-                var path = Path.Combine(Directory.GetCurrentDirectory(),Constants.PayslipResponseFileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(),Constants.PayslipResponseFileName+DateTime.Now.ToString("yyyyMMddHHmmss")+ Constants.CSVFileExtension);
                 using (var fileStream = new StreamWriter(path))
                 using (StreamReader sr = new StreamReader(file.OpenReadStream()))               
                 {

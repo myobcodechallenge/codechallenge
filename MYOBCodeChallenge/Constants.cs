@@ -13,7 +13,7 @@ namespace MYOBCodeChallenge
         public const int TaxSlab4 = 180000;
         public const string CSVFileExtension = ".csv";
         public const string CSVMimeType = "text/csv";
-        public const string PayslipResponseFileName = "BulkPaySlips.csv";
+        public const string PayslipResponseFileName = "BulkPaySlips";
 
     }
 }
