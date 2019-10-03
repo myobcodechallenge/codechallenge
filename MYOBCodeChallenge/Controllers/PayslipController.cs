@@ -94,17 +94,25 @@ namespace MYOBCodeChallenge.Controllers
             if (!string.IsNullOrEmpty(csvInput) && csvInput.Trim().Split(',').Count() == 5)
             {
                 var values = csvInput.Trim().Split(',');
-                var employee = new Employee
+                var annualSalary = 0;
+                var super = 0m;
+                if ( int.TryParse(values[2],out annualSalary) && decimal.TryParse(values[3].TrimEnd('%'), out super)
+                   && annualSalary > 0 && super >= 0 && super <= 50)
                 {
-                    FirstName = values[0].Trim(),
-                    LastName = values[1].Trim(),
-                    AnnualSalary = Convert.ToInt32(values[2]),
-                    SuperPercentage = Convert.ToDecimal(values[3].TrimEnd('%')),
-                    PayPeriod = values[4]
+                    var employee = new Employee
+                    {
+                        FirstName = values[0].Trim(),
+                        LastName = values[1].Trim(),
+                        AnnualSalary = Convert.ToInt32(values[2]),
+                        SuperPercentage = Convert.ToDecimal(values[3].TrimEnd('%')),
+                        PayPeriod = values[4]
 
 
-                };
-                return employee;
+                    };
+                    return employee;
+                }
+                else
+                    return null;
             }
             else
             {
